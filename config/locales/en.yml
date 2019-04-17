@@ -1,9 +1,13 @@
 en:
-  title_web: "Ruby on Rails Tutorial Sample App"
   header:
     home: "Home"
     help: "Help"
     login: "Log in"
+    user: "Users"
+    profile: "Profile"
+    setting: "Settings"
+    logout: "Log out"
+    account: "Account"
   footer:
     content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
     by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
@@ -46,7 +50,47 @@ en:
     new:
       title: "Sign Up"
       content: "This will be a signup page for new users."
+      create: "Create your account"
+      success_ac: "Welcome to the Sample App!"
+      fail_ac: "Create account don't success"
+    create:
+      info: "Please check your email to activate your account."
+    show:
+      error: "Don't find user"
+    edit:
+      title: "Edit user"
+      button_text: "Save changes"
+      name_page: "Update your profile"
+      change: "Change"
+    update:
+      success: "Profile updated"
+    logged_in_user:
+      unsuccess: "Please login"
+    index:
+      title: "All users"
+      sure: "You sure?"
+    destroy:
+      success: "User deleted"
+      unsuccess: "User did not delete"
+      delete: "Delete"
+    account_activate:
+      edit:
+        active: "Account activated!"
+        un_active: "Invalid activation link"
+  mail:
+    content: "Welcome to the Sample App! Click on the link below to activate your account:"
+    active: "Active"
+    hi: "Hi"
+    account: "Account activation"
   layouts:
     application:
-      page_title: " Ruby on Rails Tutorial Sample App"
+      page_title: "Ruby on Rails Tutorial Sample App"
       name: "Sample App"
+  sessions:
+    login: "Log in"
+    new_user: "New user?"
+    signup: "Sign up now!"
+    error: "Invalid email/password combination"
+    success: "Login Successful"
+    remember_me_html: "<span>Remember me on this computer</span>"
+    message: "Account not activated. Check your email for the activation link."
