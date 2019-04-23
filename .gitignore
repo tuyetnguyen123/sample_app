@@ -31,4 +31,7 @@
 /config/master.key
 /config/database.yml
 .idea
-/test
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
