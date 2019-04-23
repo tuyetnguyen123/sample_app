@@ -757,3 +757,4 @@ Rails/ScopeArgs:
 Rails/Validation:
   Description: "Use sexy validations."
   Enabled: true
+

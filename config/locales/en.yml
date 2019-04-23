@@ -1,9 +1,13 @@
 en:
-  title_web: "Ruby on Rails Tutorial Sample App"
   header:
     home: "Home"
     help: "Help"
     login: "Log in"
+    user: "Users"
+    profile: "Profile"
+    setting: "Settings"
+    logout: "Log out"
+    account: "Account"
   footer:
     content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
     by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
@@ -46,7 +50,18 @@ en:
     new:
       title: "Sign Up"
       content: "This will be a signup page for new users."
+      create: "Create your account"
+      success_ac: "Welcome to the Sample App!"
+      fail_ac: "Create account don't success"
+    show:
+      error: "Don't find user"
   layouts:
     application:
-      page_title: " Ruby on Rails Tutorial Sample App"
+      page_title: "Ruby on Rails Tutorial Sample App"
       name: "Sample App"
+  sessions:
+    login: "Log in"
+    new_user: "New user?"
+    signup: "Sign up now!"
+    error: "Invalid email/password combination"
+    success: "Login Successful"

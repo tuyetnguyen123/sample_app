@@ -1,9 +1,13 @@
 vi:
-  title_web: "Ruby on Rails Tutorial Sample App"
   header:
     home: "Trang chủ"
     help: "Trợ giúp"
     login: "Đăng nhập"
+    user: "Người dùng"
+    profile: "Hồ sơ"
+    setting: "Cài đặt"
+    logout: "Đăng xuất"
+    account: "Account"
   footer:
     content_html: 'The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
                       by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
@@ -39,11 +43,23 @@ vi:
         <a href="http://rubyonrails.org/">Ruby on Rails</a>.
         Đây là ứng dụng mẫu cho hướng dẫn.
       </p>'
-    users:
-      new:
-        title: "Đăng Ký"
-        content: "Đây là trang đăng ký cho người sử dụng mới"
+
+  users:
+    new:
+      title: "Đăng Ký"
+      content: "Đây là trang đăng ký cho người sử dụng mới"
+      create: "Tạo tài khoản"
+      success_ac: "Chào mừng bạn đến với Sample App!"
+      fail_ac: "Tạo tài khoản không thành công"
+    show:
+      error: "Không tìm thấy người dùng"
   layouts:
     application:
       page_title: " Sản phẩm mẫu của Ruby On Rails"
       name: "App Mẫu"
+  sessions:
+    login: "Đăng nhập"
+    new_user: "Người sử dụng mới?"
+    signup: "Đăng nhập ngay!"
+    error: "Email/password không so khớp"
+    success: "Đăng nhập thành công"
