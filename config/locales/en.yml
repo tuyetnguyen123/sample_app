@@ -53,35 +53,8 @@ en:
       create: "Create your account"
       success_ac: "Welcome to the Sample App!"
       fail_ac: "Create account don't success"
-    create:
-      info: "Please check your email to activate your account."
     show:
       error: "Don't find user"
-    edit:
-      title: "Edit user"
-      button_text: "Save changes"
-      name_page: "Update your profile"
-      change: "Change"
-    update:
-      success: "Profile updated"
-    logged_in_user:
-      unsuccess: "Please login"
-    index:
-      title: "All users"
-      sure: "You sure?"
-    destroy:
-      success: "User deleted"
-      unsuccess: "User did not delete"
-      delete: "Delete"
-    account_activate:
-      edit:
-        active: "Account activated!"
-        un_active: "Invalid activation link"
-  mail:
-    content: "Welcome to the Sample App! Click on the link below to activate your account:"
-    active: "Active"
-    hi: "Hi"
-    account: "Account activation"
   layouts:
     application:
       page_title: "Ruby on Rails Tutorial Sample App"
@@ -92,5 +65,3 @@ en:
     signup: "Sign up now!"
     error: "Invalid email/password combination"
     success: "Login Successful"
-    remember_me_html: "<span>Remember me on this computer</span>"
-    message: "Account not activated. Check your email for the activation link."
