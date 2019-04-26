@@ -99,7 +99,7 @@ footer {
 
 /* miscellaneous */
 
-.debug_dump {
+.debug-dump {
   clear: both;
   float: left;
   width: 100%;
@@ -110,7 +110,7 @@ footer {
 /* sidebar */
 
 aside {
-  section.user_info {
+  section.user-info {
     margin-top: 20px;
   }
   section {
@@ -140,7 +140,7 @@ aside {
   margin-right: 10px;
 }
 
-.gravatar_edit {
+.gravatar-edit {
   margin-top: 15px;
 }
 
@@ -157,7 +157,7 @@ input {
   height: auto !important;
 }
 
-#error_explanation {
+#error-explanation {
   color: red;
   ul {
     color: red;
@@ -165,11 +165,35 @@ input {
   }
 }
 
-.field_with_errors {
+.field-with-errors {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
   }
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
 
+#session-remember-me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
