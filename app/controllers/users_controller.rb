@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :find_user, only: [:show, :edit, :destroy]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :find_user, only: %i(show edit destroy)
+  before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
   def index
@@ -16,15 +16,17 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = t(".new.success_ac")
-      redirect_to @user
+      flash[:info] = t(".create.info")
+      redirect_to root_url
     else
-      flash[:danger] = t(".new.fail_ac")
+      flash.now[:danger] = t(".new.fail_ac")
       render :new
     end
   end
 
   def show
+    @follow = current_user.active_relationships.build
+    @unfollow = current_user.active_relationships.find_by followed_id: @user.id
     @microposts = @user.microposts.paginate(page: params[:page],
                                             per_page: Settings.Post.num_post)
   end
@@ -52,8 +54,15 @@ class UsersController < ApplicationController
 
   private
 
+  def user_params
+    params.require(:user).permit :name, :email, :password,
+      :password_confirmation
+  end
+
   def find_user
-    return if @user = User.find_by(id: params[:id])
+    @user = User.find_by id: params[:id]
+
+    return if @user
     redirect_to root_path
     flash[:danger] = t ".error"
   end
@@ -66,15 +75,10 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    redirect_to root_url unless current_user? @user
+    redirect_to root_url unless current_user.current_user? @user
   end
 
   def admin_user
     redirect_to root_url unless current_user.admin?
-  end
-
-  def user_params
-    params.require(:user).permit :name, :email, :password,
-      :password_confirmation
   end
 end

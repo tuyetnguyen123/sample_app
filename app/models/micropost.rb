@@ -1,11 +1,12 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+
   validates :user, presence: true
   validates :content, presence: true,
-    length: {maximum: Settings.Post.content_size}
+            length: {maximum: Settings.Post.content_size}
   validate  :picture_size
 
-  scope :desc, ->{order created_at: :desc}
+  scope :micropost_desc, ->{order created_at: :desc}
   scope :feed, (lambda do |user|
     where user_id: user.id
   end)
@@ -19,4 +20,3 @@ class Micropost < ApplicationRecord
     errors.add(:picture, t("microposts.controller.size_image_content"))
   end
 end
-

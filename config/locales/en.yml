@@ -109,21 +109,10 @@ en:
       edit:
         active: "Account activated!"
         un_active: "Invalid activation link"
-  mail:
-    content: "Welcome to the Sample App! Click on the link below to activate your account:"
-    active: "Active"
-    hi: "Hi"
-    account: "Account activation"
-    pass_reset: "Password reset"
-    passwd_reset:
-      to_reset: "To reset your password click the link below:"
-      expire: "This link will expire in two hours.
-                 If you did not request your password to be reset, please ignore this email and
-                 your password will stay as it is."
-      confirm: "Confirmation"
-      submit: "Update password"
-      empty_er: "can't be empty"
-      passw_reset: "Password has been reset."
+    show_follow:
+      view_my_profile: "view my profile"
+      micropost: "Microposts"
+
   layouts:
     application:
       page_title: "Ruby on Rails Tutorial Sample App"
@@ -135,8 +124,6 @@ en:
     error: "Invalid email/password combination"
     success: "Login Successful"
     remember_me_html: "<span>Remember me on this computer</span>"
-    message: "Account not activated. Check your email for the activation link."
-    forgot: "(forgot password)"
   password_reset:
     title: "Forgot password"
     create:
@@ -161,5 +148,20 @@ en:
       post: "Post"
     error:
       contain: "The form contains"
+  relationships:
+    stats:
+      following:
+        one: "1 Following"
+        other: "%{count} Following"
+      followers:
+        one: "1 Follower"
+        other: "%{count} Follower"
+    form:
+      follow:
+        submit: "Follow"
+      unfollow:
+        submit: "Unfollow"
+    following: "following"
+    follower: "follower"
   micropostjs:
     max: "Maximum file size is 5MB. Please choose a smaller file."
